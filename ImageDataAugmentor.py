@@ -26,5 +26,5 @@ def create_augmented_folder(input_folder, output_folder):
 
 if __name__ == '__main__':
     input_folder = sys.argv[1]
-    output_folder = sys.argv[1]
+    output_folder = sys.argv[2]
     create_augmented_folder(input_folder=input_folder, output_folder=output_folder)
