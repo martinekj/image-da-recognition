@@ -49,10 +49,11 @@ If the input file has .docx or .doc extenstion the program convert this document
 
 *Optional step:* Apply **ImageDataAugmentor.py** to enrich the dataset. It creates a second folder with the same content, but random transformations will be performed (random blurring and rotating) which will make the dataset more difficult. 
 ```python
-python3 ImageDataAugmentor.py example-dataset **SimpleDactsSegmenter**
+python3 ImageDataAugmentor.py example-dataset 
 ```
+The folder example-dataset_trans will be created.
 
-3) Perform the segmentation into a text line images by 
+3) Perform the segmentation into a text line images by **SimpleDactsSegmenter**
 ```python
 python3 SimpleDactsSegmenter.py example-dataset output
 ```  
