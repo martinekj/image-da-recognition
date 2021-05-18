@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import os
 import img_utils
+import config
 import sys
 
 
@@ -18,13 +19,12 @@ def create_augmented_folder(input_folder, output_folder):
             img = img_utils.apply_blur(img)
 
             cv2.imwrite(os.path.join(output_folder, image_file), img)
+            counter += 1
             if counter % 100 == 0:
                 print("Processed: ", counter, " (", counter / len(os.listdir(input_folder)), " % )")
-            counter += 1
 
 
 
 if __name__ == '__main__':
     input_folder = sys.argv[1]
-    output_folder = sys.argv[2]
-    create_augmented_folder(input_folder=input_folder, output_folder=output_folder)
+    create_augmented_folder(input_folder=input_folder, output_folder=config.DATASET_NAME+"_trans")

@@ -112,3 +112,16 @@ class DocumentWriter:
 
         self.document.save(self.dataset_name + ".docx")
 
+
+if __name__ == "__main__":
+    input_file = sys.argv[1]
+
+    if input_file.endswith(".conll"):
+        doc_writer = DocumentWriter()
+        doc_writer.create_dataset(input_file)
+
+    elif input_file.endswith(".docx") or input_file.endswith(".doc"):
+        doc_writer = DocumentWriter()
+        doc_writer.convert_to_images()
+
+
