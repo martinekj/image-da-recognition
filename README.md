@@ -1,7 +1,9 @@
 # Image DA Recognition
 This repository contains the scripts for the dataset creation for dialogue acts recognition using visual information. 
-In this current form, the creation of 8 datasets with different background is supported.
+In this current form, the creation of 4 datasets with different background is supported. With the possibilities of image transformations, the total number of different datasets is 8 (two version of each 4).
 The scripts are meant to support dialogue acts recognition, but they can be used for other text classification dataset as well (provided CONLL format).
+
+The citation to the conference paper will be provided after presentation and publishing.
 
 ## Requirements
 - **python 3.x**
@@ -10,17 +12,18 @@ The scripts are meant to support dialogue acts recognition, but they can be used
 - opencv-python
 - skimage (skimage.filters for performing Sauvola thresholding)
 - docx
-- docx2pdf (only for Windows)
+- docx2pdf
 - pdf2image
 - shutil
 
+The program is runnable in OS Linux as well.
 
 ## Scripts
 
 ### Fundamental scripts and files
-- main.py
-- SimpleDactsSegmenter
-- 
+- DocumentWriter.py
+- SimpleDactsSegmenter.py
+- ImageDataAugmentor.py
 
 Some scripts may produce auxiliary and temporary files such as visualization images etc.
 
